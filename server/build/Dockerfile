@@ -43,7 +43,7 @@ HEALTHCHECK --interval=30s --timeout=10s \
 
 # Configure entrypoint and command with proper permissions
 COPY --chown=mattermost:mattermost --chmod=765 entrypoint.sh /
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./server/build/entrypoint.sh"]
 WORKDIR /mattermost
 CMD ["mattermost"]
 
