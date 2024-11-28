@@ -47,7 +47,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 WORKDIR /mattermost
 CMD ["mattermost"]
 
-EXPOSE 8065 8067 8074 8075
+EXPOSE 8065 8067 8074 8075 5432
 
 # Declare volumes for mount point directories
 VOLUME ["/mattermost/data", "/mattermost/logs", "/mattermost/config", "/mattermost/plugins", "/mattermost/client/plugins"]
